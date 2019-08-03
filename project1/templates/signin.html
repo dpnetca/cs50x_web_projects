@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    cs50x - Project1
+{% endblock %}
+
+{% block heading %}
+    Sign In  
+{% endblock %}
+
+{% block body %}
+<form action="{{ url_for('signin') }}" method="post">
+    <input type="text" name="username" placeholder="username">
+    <input type="password" name="password" placeholder="password">
+    <button>signin</button>
+</form>
+{% endblock %}

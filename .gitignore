@@ -1,3 +1,6 @@
 .venv
 .cs50x-projects
 .vscode
+secret*
+__pycache__
+flask_session
