@@ -1,0 +1,22 @@
+{% extends "orders/base.html" %}
+{% block title %}Pointer's Pizza - Menu{% endblock %}
+
+{% block body %}
+    <h1>Menu</h1>
+    Signed in as <a href="{% url 'user_detail' %}">{{ user.username }}</a> (<a href="{% url 'logout' %}">logout</a>)
+    <table>
+        {% for item in menu %}
+            <tr>
+                <td>
+                    {{ item.size }}
+                </td>
+                <td>
+                    {{ item.item }}
+                </td>
+                <td>
+                    {{ item.price }}
+                </td>
+            </tr>
+        
+        {% endfor %}
+{% endblock %}

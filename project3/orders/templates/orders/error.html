@@ -1,0 +1,11 @@
+{% extends "orders/base.html" %}
+{% block title %}Pointer's Pizza - Error{% endblock %}
+
+{% block body %}
+<h1>Error</h1>
+{% if message %}
+    <div>
+        {{ message }}
+    </div>
+{% endif %}
+{% endblock %}

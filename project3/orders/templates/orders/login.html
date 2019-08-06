@@ -1,0 +1,20 @@
+{% extends "orders/base.html" %}
+{% block title %}Pointer's Pizza - Login{% endblock %}
+
+{% block body %}
+    <h1>Login</h1>
+    
+    {% if message %}
+        <div>
+            {{ message }}
+        </div>
+    {% endif %}
+
+    <form action="{% url 'login' %}" method="post">
+        {% csrf_token %}
+        <p>Username: <input name="username" type="text"/></p>
+        <p>Password: <input name="password" type="password"/></p>
+        <p><input type="submit" value="Login"/></p>
+    </form>
+    <p><a href="{% url 'register'%}"> Register New User</a></p>
+{% endblock %}
